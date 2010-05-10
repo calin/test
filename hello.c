@@ -4,11 +4,15 @@
 
 int main(int argc, char **argv)
 {
-     if(argc == 2) {
-	  printf("Hello, %s!\n", argv[1]);
-     }
-     else {
+     switch(argc) {
+     case 1:
 	  printf("Hello, Github world!\n");
+	  break;
+     case 2:
+	  printf("Hello, %s!\n", argv[1]);
+	  break;
+     default:
+	  printf("Invalid number of arguments.\n");
      }
 
      return 0;
