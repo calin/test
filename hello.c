@@ -4,11 +4,15 @@
 
 int main(int argc, char **argv)
 {
-     if(argc == 2) {  /* Custom greeting */
-	  printf("Hello, %s!\n", argv[1]);
-     }
-     else {           /* Default greeting */
+     switch(argc) {
+     case 1:          /* Default greeting */
 	  printf("Hello, Github world!\n");
+	  break;
+     case 2:          /* Custom greeting */
+	  printf("Hello, %s!\n", argv[1]);
+	  break;
+     default:
+	  printf("Invalid number of arguments.\n");
      }
 
      return 0;
